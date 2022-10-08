@@ -1,0 +1,108 @@
+* c:\users\yuvaraj.n\esim-workspace\esimfun\esimfun.cir
+
+.include "D:\esim\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__diode_pw2nd_11v0.model.spice"
+.include "D:\esim\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__r+c.model.spice"
+.include "D:\esim\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__linear.model.spice"
+.include "D:\esim\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__pnp.model.spice"
+.include "D:\esim\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__diode_pd2nw_11v0.model.spice"
+.lib "D:\esim\FOSSEE\eSim\library\sky130_fd_pr\models\sky130.lib.spice" tt
+.include "D:\esim\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__inductors.model.spice"
+xsc6 net-_sc6-pad1_ net-_sc18-pad1_ net-_sc17-pad2_ sky130_stdcells__or2_0 W=1 L=1
+xsc7 net-_sc31-pad2_ net-_sc23-pad2_ net-_sc7-pad3_ sky130_stdcells__or2_0 W=1 L=1
+xsc31 net-_sc23-pad2_ net-_sc31-pad2_ ? sky130_stdcells__and2_0 W=1 L=1
+xsc30 net-_sc30-pad1_ net-_sc30-pad2_ net-_sc13-pad2_ sky130_stdcells__and2_0 W=1 L=1
+xsc24 net-_sc24-pad1_ net-_sc24-pad1_ net-_sc24-pad1_ net-_sc24-pad1_ net-_sc21-pad2_ sky130_stdcells__and4_1 W=1 L=1
+xsc25 net-_sc25-pad1_ net-_sc25-pad1_ net-_sc25-pad1_ net-_sc25-pad1_ net-_sc24-pad1_ sky130_stdcells__and4_1 W=1 L-1
+xsc17 net-_sc17-pad1_ net-_sc17-pad2_ net-_sc17-pad3_ sky130_stdcells__or2_0 W=1 L=1
+* u2  net-_u1-pad4_ net-_sc32-pad3_ ? net-_u2-pad4_ net-_u2-pad4_ count23
+* u3  net-_u2-pad4_ net-_sc32-pad3_ net-_u14-pad~_ net-_u3-pad4_ net-_u3-pad4_ count23
+* u1  net-_sc26-pad3_ net-_sc32-pad3_ ? net-_u1-pad4_ net-_u1-pad4_ count23
+xsc2 net-_sc2-pad1_ net-_sc1-pad1_ sky130_tests__not W=1 L=1
+xsc9 net-_sc15-pad2_ net-_sc2-pad1_ sky130_tests__not W=1 L=1
+xsc15 net-_sc15-pad1_ net-_sc15-pad2_ sky130_tests__not W=1 L=1
+xsc19 net-_sc10-pad2_ net-_sc15-pad1_ sky130_tests__not W=1 L=1
+xsc1 net-_sc1-pad1_ net-_sc1-pad2_ sky130_tests__not W=1 L=1
+xsc10 net-_sc1-pad2_ net-_sc10-pad2_ sky130_tests__not W=1 L=1
+xsc26 net-_sc10-pad2_ net-_sc18-pad2_ net-_sc26-pad3_ sky130_stdcells__and2_0 W=1 L=1
+* s c m o d e
+xsc32 net-_sc18-pad2_ net-_sc28-pad2_ net-_sc32-pad3_ sky130_stdcells__and2_0 W=1 L=1
+* u4  net-_sc7-pad3_ net-_sc25-pad1_ net-_u18-pad2_ xor21
+* u5  net-_sc23-pad1_ net-_sc6-pad1_ net-_u17-pad2_ xor21
+* u9  net-_sc23-pad2_ plot_v1
+* u8  net-_sc18-pad2_ plot_v1
+* u7  net-_sc28-pad2_ plot_v1
+* u10  net-_sc6-pad1_ plot_v1
+* u11  net-_sc13-pad1_ plot_v1
+* u12  net-_sc14-pad1_ plot_v1
+* u13  net-_sc14-pad2_ plot_v1
+* u14  net-_u14-pad~_ plot_v1
+xsc12 net-_sc11-pad1_ /c1 gnd gnd sky130_fd_pr__nfet_01v8 W=1 L=1
+xsc4 /c1 net-_sc11-pad1_ gnd gnd sky130_fd_pr__nfet_01v8 W=1 L=1
+xsc11 net-_sc11-pad1_ /c1 net-_sc11-pad3_ net-_sc11-pad3_ sky130_fd_pr__pfet_01v8 W=1 L=1
+xsc3 /c1 ? net-_sc11-pad3_ net-_sc11-pad3_ sky130_fd_pr__pfet_01v8 W=1 L=1
+v1 net-_sc11-pad3_ gnd  dc 5
+* u6  net-_sc18-pad2_ net-_sc23-pad2_ net-_u16-pad3_ net-_sc30-pad2_ dlatch31
+* u16  net-_sc18-pad2_ net-_sc30-pad2_ net-_u16-pad3_ net-_sc30-pad1_ dlatch31
+* u17  net-_sc18-pad2_ net-_u17-pad2_ net-_sc17-pad3_ net-_sc31-pad2_ dlatch31
+* u18  net-_sc18-pad2_ net-_u18-pad2_ net-_u16-pad3_ net-_sc25-pad1_ dlatch31
+* u19  net-_sc11-pad1_ net-_sc18-pad2_ inv11
+xsc13 net-_sc13-pad1_ net-_sc13-pad2_ net-_sc13-pad3_ net-_sc13-pad3_ sky130_fd_pr__nfet_01v8 W=1 L=1
+xsc8 net-_sc13-pad1_ net-_sc13-pad2_ net-_sc8-pad3_ net-_sc8-pad3_ sky130_fd_pr__pfet_01v8 W=1 L=1
+xsc16 net-_sc14-pad1_ net-_sc14-pad2_ gnd gnd sky130_fd_pr__nfet_01v8 W=1 L=1
+xsc22 net-_sc14-pad2_ net-_sc21-pad2_ gnd gnd sky130_fd_pr__nfet_01v8 W=1 L=1
+xsc29 ? net-_sc28-pad2_ gnd gnd sky130_fd_pr__nfet_01v8 W=1 L=1
+xsc14 net-_sc14-pad1_ net-_sc14-pad2_ net-_sc14-pad3_ net-_sc14-pad3_ sky130_fd_pr__pfet_01v8 W=1 L=1
+xsc21 net-_sc14-pad2_ net-_sc21-pad2_ net-_sc14-pad3_ net-_sc14-pad3_ sky130_fd_pr__pfet_01v8 W=1 L=1
+xsc28 net-_sc17-pad1_ net-_sc28-pad2_ net-_sc14-pad3_ net-_sc14-pad3_ sky130_fd_pr__pfet_01v8 W=1 L=1
+xsc20 net-_sc18-pad1_ net-_sc18-pad2_ gnd gnd sky130_fd_pr__nfet_01v8 W=1 L=1
+xsc18 net-_sc18-pad1_ net-_sc18-pad2_ net-_sc14-pad3_ net-_sc14-pad3_ sky130_fd_pr__pfet_01v8 W=1 L=1
+xsc27 net-_sc23-pad1_ net-_sc23-pad2_ gnd gnd sky130_fd_pr__nfet_01v8 W=1 L=1
+xsc23 net-_sc23-pad1_ net-_sc23-pad2_ net-_sc14-pad3_ net-_sc14-pad3_ sky130_fd_pr__pfet_01v8 W=1 L=1
+v2 net-_sc14-pad3_ gnd  dc 5
+a1 [net-_u1-pad4_ ] [net-_sc32-pad3_ ] [? net-_u2-pad4_ net-_u2-pad4_ ] u2
+a2 [net-_u2-pad4_ ] [net-_sc32-pad3_ ] [net-_u14-pad~_ net-_u3-pad4_ net-_u3-pad4_ ] u3
+a3 [net-_sc26-pad3_ ] [net-_sc32-pad3_ ] [? net-_u1-pad4_ net-_u1-pad4_ ] u1
+a4 [net-_sc7-pad3_ ] [net-_sc25-pad1_ ] [net-_u18-pad2_ ] u4
+a5 [net-_sc23-pad1_ ] [net-_sc6-pad1_ ] [net-_u17-pad2_ ] u5
+a6 [net-_sc18-pad2_ ] [net-_sc23-pad2_ ] [net-_u16-pad3_ ] [net-_sc30-pad2_ ] u6
+a7 [net-_sc18-pad2_ ] [net-_sc30-pad2_ ] [net-_u16-pad3_ ] [net-_sc30-pad1_ ] u16
+a8 [net-_sc18-pad2_ ] [net-_u17-pad2_ ] [net-_sc17-pad3_ ] [net-_sc31-pad2_ ] u17
+a9 [net-_sc18-pad2_ ] [net-_u18-pad2_ ] [net-_u16-pad3_ ] [net-_sc25-pad1_ ] u18
+a10 [net-_sc11-pad1_ ] [net-_sc18-pad2_ ] u19
+* Schematic Name:                             count23, NgSpice Name: count23
+.model u2 count23(rise_delay=1.0e-9 fall_delay=1.0e-9 input_load=1.0e-12 instance_id=1 ) 
+* Schematic Name:                             count23, NgSpice Name: count23
+.model u3 count23(rise_delay=1.0e-9 fall_delay=1.0e-9 input_load=1.0e-12 instance_id=1 ) 
+* Schematic Name:                             count23, NgSpice Name: count23
+.model u1 count23(rise_delay=1.0e-9 fall_delay=1.0e-9 input_load=1.0e-12 instance_id=1 ) 
+* Schematic Name:                             xor21, NgSpice Name: xor21
+.model u4 xor21(rise_delay=1.0e-9 fall_delay=1.0e-9 input_load=1.0e-12 instance_id=1 ) 
+* Schematic Name:                             xor21, NgSpice Name: xor21
+.model u5 xor21(rise_delay=1.0e-9 fall_delay=1.0e-9 input_load=1.0e-12 instance_id=1 ) 
+* Schematic Name:                             dlatch31, NgSpice Name: dlatch31
+.model u6 dlatch31(rise_delay=1.0e-9 fall_delay=1.0e-9 input_load=1.0e-12 instance_id=1 ) 
+* Schematic Name:                             dlatch31, NgSpice Name: dlatch31
+.model u16 dlatch31(rise_delay=1.0e-9 fall_delay=1.0e-9 input_load=1.0e-12 instance_id=1 ) 
+* Schematic Name:                             dlatch31, NgSpice Name: dlatch31
+.model u17 dlatch31(rise_delay=1.0e-9 fall_delay=1.0e-9 input_load=1.0e-12 instance_id=1 ) 
+* Schematic Name:                             dlatch31, NgSpice Name: dlatch31
+.model u18 dlatch31(rise_delay=1.0e-9 fall_delay=1.0e-9 input_load=1.0e-12 instance_id=1 ) 
+* Schematic Name:                             inv11, NgSpice Name: inv11
+.model u19 inv11(rise_delay=1.0e-9 fall_delay=1.0e-9 input_load=1.0e-12 instance_id=1 ) 
+.tran 0.01e-00 10e-00 0e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(net-_sc23-pad2_)
+plot v(net-_sc18-pad2_)
+plot v(net-_sc28-pad2_)
+plot v(net-_sc6-pad1_)
+plot v(net-_sc13-pad1_)
+plot v(net-_sc14-pad1_)
+plot v(net-_sc14-pad2_)
+plot v(net-_u14-pad~_)
+.endc
+.end
